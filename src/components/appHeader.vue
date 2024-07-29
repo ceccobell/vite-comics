@@ -1,6 +1,71 @@
 <script>
 export default {
-
+    data() {
+        return {
+            menuItems: [
+                {
+                    name: 'CHARACTERS',
+                    url: '#',
+                    active: false
+                },
+                {
+                    name: 'COMICS',
+                    url: '#',
+                    active: true
+                },
+                {
+                    name: 'MOVIES',
+                    url: '#',
+                    active: false
+                },
+                {
+                    name: 'TV',
+                    url: '#',
+                    active: false
+                },
+                {
+                    name: 'GAMES',
+                    url: '#',
+                    active: false
+                },
+                {
+                    name: 'COLLECTIBLES',
+                    url: '#',
+                    active: false
+                },
+                {
+                    name: 'VIDEOS',
+                    url: '#',
+                    active: false
+                },
+                {
+                    name: 'FANS',
+                    url: '#',
+                    active: false
+                },
+                {
+                    name: 'NEWS',
+                    url: '#',
+                    active: false
+                },
+                {
+                    name: 'SHOP',
+                    url: '#',
+                    active: false
+                }
+            ]
+        }
+    },
+    methods: {
+        setActive(selectedItem) {
+            this.menuItems.forEach(item => {
+                if (item.active) {
+                    item.active = false
+                }
+            })
+            selectedItem.active = true
+        }
+    }
 }
 </script>
 
@@ -12,16 +77,9 @@ export default {
                     <img src="/public/img/dc-logo.png" alt="" class="img-fluid">
                     <div class="h-100">
                         <ul class="d-flex align-items-center list-unstyled h-100">
-                            <li><a href="#" class="text-decoration-none text-black me-3">CHARACTERS</a></li>
-                            <li class="active me-3"><a href="#" class="text-decoration-none">COMICS</a></li>
-                            <li><a href="#" class="text-decoration-none text-black me-3">MOVIES</a></li>
-                            <li><a href="#" class="text-decoration-none text-black me-3">TV</a></li>
-                            <li><a href="#" class="text-decoration-none text-black me-3">GAMES</a></li>
-                            <li><a href="#" class="text-decoration-none text-black me-3">COLLECTIBLES</a></li>
-                            <li><a href="#" class="text-decoration-none text-black me-3">VIDEOS</a></li>
-                            <li><a href="#" class="text-decoration-none text-black me-3">FANS</a></li>
-                            <li><a href="#" class="text-decoration-none text-black me-3">NEWS</a></li>
-                            <li><a href="#" class="text-decoration-none text-black">SHOP</a></li>
+                            <li v-for="item, index in menuItems" :key="index">
+                                <a @click="setActive(item)" :href="item.url" :class="item.active ? 'active' : ''" class="text-decoration-none text-black me-3">{{ item.name }}</a>
+                            </li>
                         </ul>
                     </div>
                 </div>
