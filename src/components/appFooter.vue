@@ -84,6 +84,7 @@ export default {
 .top-footer {
     background-image: url("/public/img/footer-bg.jpg");
     background-size: cover;
+    min-height: 300px;
 }
 
 .bottom-footer {
@@ -100,7 +101,7 @@ export default {
   background-image: url("/public/img/dc-logo-bg.png");
   background-size: cover;
   background-position: center;
-  height: 350px;
+  min-height: 100%;
 }
 
 .text-blue {
@@ -110,5 +111,10 @@ export default {
 .border-blue {
     border: 2px solid #0282F9;
     padding: 10px;
+}
+
+ul {
+    padding-left: 0;  /* Rimuove il padding a sinistra */
+    margin-left: 0;   /* Rimuove il margin a sinistra */
 }
 </style>
