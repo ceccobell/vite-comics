@@ -9,9 +9,9 @@ export default {
         <div class="top-footer">
             <div class="container">
                 <div class="row">
-                    <div class="col-6">
+                    <div class="col-12 bg-image">
                         <div class="content">
-                            <div class="col-4">
+                            <div class="me-4">
                                 <h4 class="text-white my-3">DC COMICS</h4>
                                 <ul class="list-unstyled">
                                     <li><a href="" class="text-decoration-none text-secondary">Characters</a></li>
@@ -28,7 +28,7 @@ export default {
                                     <li><a href="" class="text-decoration-none text-secondary">Shop DC Collectibles</a></li>
                                 </ul>
                             </div>
-                            <div class="col-4">
+                            <div class="me-4">
                                 <h4 class="text-white my-3">DC</h4>
                                 <ul class="list-unstyled">
                                     <li><a href="" class="text-decoration-none text-secondary">Terms Of Use</a></li>
@@ -44,7 +44,7 @@ export default {
                                     <li><a href="" class="text-decoration-none text-secondary">Contact Us</a></li>
                                 </ul>
                             </div>
-                            <div class="col-4">
+                            <div>
                                 <h4 class="text-white my-3">SITES</h4>
                                 <ul class="list-unstyled">
                                     <li><a href="" class="text-decoration-none text-secondary">DC</a></li>
@@ -56,7 +56,6 @@ export default {
                             </div>
                         </div>
                     </div>
-                    <div class="col-6 bg-image"></div>
                 </div>
             </div>
         </div>
@@ -99,8 +98,9 @@ export default {
 
 .bg-image {
   background-image: url("/public/img/dc-logo-bg.png");
-  background-size: cover;
-  background-position: center;
+  background-size: contain;
+  background-position: right center;
+  background-repeat: no-repeat;
   min-height: 100%;
 }
 

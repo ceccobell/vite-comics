@@ -43,10 +43,8 @@ export default {
     <main>
         <div class="container-fluid">
             <div class="row">
-                <div class="col-12 bg-black">
-                    <div class="content py-4 align-items-center">
-                        <h1 class="text-white fs-3">-> Content goes here <--</h1>
-                    </div>
+                <div class="col-12 h-300">
+                    <img src="/public/img/jumbotron.jpg" alt="" class="jumbotron">
                 </div>
                 <div class="col-12 bg-blue">
                     <div class="content justify-content-center py-4">
@@ -64,6 +62,11 @@ export default {
 </template>
 
 <style scoped>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 .content {
     width: 90%;
     margin: 0 auto;
@@ -77,5 +80,16 @@ export default {
 .content img {
     height: 30px;
     width: auto;
+}
+
+.h-300 {
+    height: 300px;
+}
+
+.jumbotron {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top;
 }
 </style>
