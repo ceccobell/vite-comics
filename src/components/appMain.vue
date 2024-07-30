@@ -66,43 +66,43 @@ export default {
           type: "comic book"
         },
         {
-          thumb: "https://static.wikia.nocookie.net/marvel_dc/images/5/50/Batman_Beyond_v.1_1.jpg/revision/latest?cb=20080809201655",
+          thumb: "https://static.wikia.nocookie.net/marvel_dc/images/5/50/Batman_Beyond_v.1_1.jpg",
           price: "$2.99",
           series: "Batman Beyond",
           type: "comic book"
         },
         {
-          thumb: "https://static.wikia.nocookie.net/marvel_dc/images/0/0d/Batman_Superman_Vol_1_1.jpg/revision/latest/scale-to-width-down/1200?cb=20130627211607",
+          thumb: "https://static.wikia.nocookie.net/marvel_dc/images/0/0d/Batman_Superman_Vol_1_1.jpg",
           price: "$3.99",
           series: "Batman/Superman",
           type: "comic book"
         },
         {
-          thumb: "https://static.wikia.nocookie.net/marvel_dc/images/c/cf/Batman_Superman_Annual_Vol_2_1.jpg/revision/latest?cb=20200929145132",
+          thumb: "https://static.wikia.nocookie.net/marvel_dc/images/c/cf/Batman_Superman_Annual_Vol_2_1.jpg",
           price: "$4.99",
           series: "Batman/Superman Annual",
           type: "comic book"
         },
         {
-          thumb: "https://static.wikia.nocookie.net/marvel_dc/images/5/54/Batman_The_Joker_War_Zone_Vol_1_1.jpg/revision/latest?cb=20200929124651",
+          thumb: "https://static.wikia.nocookie.net/marvel_dc/images/5/54/Batman_The_Joker_War_Zone_Vol_1_1.jpg",
           price: "$5.99",
           series: "Batman: The Joker War Zone",
           type: "comic book"
         },
         {
-          thumb: "https://static.wikia.nocookie.net/marvel_dc/images/6/64/Batman_Three_Jokers_Collected.jpg/revision/latest?cb=20201123054610",
+          thumb: "https://static.wikia.nocookie.net/marvel_dc/images/6/64/Batman_Three_Jokers_Collected.jpg",
           price: "$6.99",
           series: "Batman: Three Jokers",
           type: "comic book"
         },
         {
-          thumb: "https://static.wikia.nocookie.net/marvel_dc/images/f/f8/Batman_White_Knight_Presents_Harley_Quinn_Vol_1_1.jpg/revision/latest?cb=20201124094800",
+          thumb: "https://static.wikia.nocookie.net/marvel_dc/images/f/f8/Batman_White_Knight_Presents_Harley_Quinn_Vol_1_1.jpg",
           price: "$4.99",
           series: "Batman: White Knight Presents: Harley Quinn",
           type: "comic book"
         },
         {
-          thumb: "https://static.wikia.nocookie.net/marvel_dc/images/c/c8/Catwoman_Vol_2_1.jpg/revision/latest?cb=20160303223223",
+          thumb: "https://static.wikia.nocookie.net/marvel_dc/images/c/c8/Catwoman_Vol_2_1.jpg",
           price: "$16.99",
           series: "Catwoman",
           type: "graphic novel"
@@ -117,8 +117,11 @@ export default {
     <main>
         <div class="container-fluid">
             <div class="row">
-                <div class="col-12 h-300">
+                <div class="col-12 h-300 position-relative">
                     <img src="/public/img/jumbotron.jpg" alt="" class="jumbotron">
+                    <div class="content">
+                        <span class="text-white py-2 px-3 bg-blue p-abs fw-semibold">CURRENT SERIES</span>
+                    </div>
                 </div>
                 <div class="row bg-black">
                     <div class="content d-flex flex-wrap py-3">
@@ -126,7 +129,9 @@ export default {
                             <img :src="card.thumb" alt="" class="img-card">
                             <h6 class="text-white text-uppercase mt-2">{{ card.series }}</h6>
                         </div> 
-
+                        <div class="col-12 text-center mb-2">
+                            <span class="text-white py-2 px-5 bg-blue">LOAD MORE</span>
+                        </div>
                     </div>
                 </div>
                 <div class="row">
@@ -183,5 +188,10 @@ export default {
     height: 250px;
     object-fit: cover;
     object-position: top;
+}
+
+.p-abs {
+    position: absolute;
+    bottom: -20px;
 }
 </style>
